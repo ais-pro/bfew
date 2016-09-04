@@ -44,12 +44,12 @@ if($page<=0)
 	}
 $curr=($page-1)*$total_per_page;
 
-$sqlv.=" and vendor.point!='Disqualified' ORDER by vendor.point DESC LIMIT $curr,$total_per_page";
+$sqlv.=" and vendor.point!='Disqualified' LIMIT $curr,$total_per_page";
 //$sqlp11.=" ";
 //echo $sqlp11;
-	$sqlrunq= mysqli_query($db, $sqlv);
+ 	$sqlrunq= mysqli_query($db, $sqlv);
 /* END */
-//echo $sqlv;
+// echo $sqlv;
 while($vendor= mysqli_fetch_array($sqlrunq)){
 // print_r($vendor);
 ?>
